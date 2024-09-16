@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.NoActionBar"
+        tools:targetApi="31">
+        <activity
+            android:name=".TrafficInfo.LargeCar.LargeCar"
+            android:exported="false"
+            android:label="@string/title_activity_large_car"
+            android:theme="@style/Theme.MyApplication.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
+        <receiver
+            android:name=".Maps.GeofenceBroadcastReceiver"
+            android:exported="false"/>
+<!--        <receiver-->
+<!--            android:name=".Maps.GeofenceBroadcastReceiver"-->
+<!--            android:exported="true"-->
+<!--            android:permission="TODO">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="com.google.android.gms.location.Geofence" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+
+
+        <activity
+            android:name=".Maps.MapsWarning_dynamic"
+            android:exported="false" /> <!-- Member -->
+        <activity
+            android:name=".Member.customize"
+            android:exported="false" />
+        <activity
+            android:name=".Member.change_key"
+            android:exported="false" />
+        <activity
+            android:name=".Member.forget_key"
+            android:exported="false" />
+        <activity
+            android:name=".Member.logined_member"
+            android:exported="false"
+            android:label="@string/title_activity_logined_member" /> <!-- TrafficInfo -->
+        <activity
+            android:name=".TrafficInfo.MapsWarning.MapsWarning_static"
+            android:exported="false" />
+        <activity
+            android:name=".TrafficInfo.traffic_information"
+            android:exported="false"
+            android:label="@string/title_activity_traffic_info" />
+        <activity
+            android:name=".TrafficInfo.StatisticView.area"
+            android:exported="false" />
+        <activity
+            android:name=".TrafficInfo.StatisticView.Zhaoshi"
+            android:exported="false" />
+        <activity
+            android:name=".TrafficInfo.StatisticView.vehical"
+            android:exported="false" />
+        <activity
+            android:name=".TrafficInfo.StatisticView.years_old"
+            android:exported="false" />
+        <activity
+            android:name=".TrafficInfo.LawSearch.traffic_law_all"
+            android:exported="false" />
+        <activity
+            android:name=".TrafficInfo.LawSearch.law_search"
+            android:exported="false" />
+        <activity
+            android:name=".Member.member"
+            android:exported="false" />
+        <activity
+            android:name=".setting"
+            android:exported="false" />
+        <activity
+            android:name=".Member.login"
+            android:exported="false" />
+        <activity
+            android:name=".Member.register"
+            android:exported="false" />
+        <activity
+            android:name=".TrafficInfo.StatisticView.statistic"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

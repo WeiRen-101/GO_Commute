@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid
+        android:color="#4d634b"/> <!-- 按鈕的背景顏色 -->
+    <corners
+        android:radius="150dp"/> <!-- 這裡的半徑應該大於等於按鈕的高度的一半 -->
+</shape>
